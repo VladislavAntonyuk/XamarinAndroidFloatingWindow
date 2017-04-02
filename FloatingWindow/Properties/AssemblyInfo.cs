@@ -1,4 +1,9 @@
-﻿using System.Reflection;
+﻿// <copyright file="AssemblyInfo.cs" company="Vladislav Antonyuk">
+// Copyright (c). All rights reserved.
+// </copyright>
+// <author>Vladislav Antonyuk</author>
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Android.App;
