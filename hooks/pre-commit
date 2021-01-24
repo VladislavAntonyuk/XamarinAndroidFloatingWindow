@@ -1,0 +1,12 @@
+#!/bin/sh
+$solution="FloatingWindow.sln"
+
+dotnet tool install -g JetBrains.ReSharper.GlobalTools
+jb inspectcode $solution --properties:Configuration=Release --output="result.xml"
+jb cleanupcode $solution
+
+dotnet tool install -g dotnet-format
+dotnet format $solution --check
+status=$?
+[ $status -eq 0 ] && echo "No errors found" || dotnet format $solution
+exit $status
